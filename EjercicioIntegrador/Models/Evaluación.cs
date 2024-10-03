@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace EjercicioIntegrador.Models
 {
-    internal class Evaluación
+    public abstract class Evaluación
     {
+        public string Nombre { get; }
+
+        public string Descripcion { get; }
+
+        public Evaluación (string nombre, string descripcion)
+        {
+            Nombre = nombre;
+            Descripcion = descripcion;
+        }
+        public abstract TipoAprobacion Evaluar();
+
+        public override string ToString()
+        {
+            return $"{Nombre}-{Descripcion}-{Evaluar()}\n\r";
+        }
     }
 }

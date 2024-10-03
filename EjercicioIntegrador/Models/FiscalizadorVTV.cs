@@ -8,5 +8,10 @@ namespace EjercicioIntegrador.Models
 {
     internal class FiscalizadorVTV
     {
+        public int CantidadVTV { get; }
+
+        public string PlantillaComprobante { get; set; }
+
+        public VTV AgregarVTV (string patente, Propietario propietario)
     }
 }
