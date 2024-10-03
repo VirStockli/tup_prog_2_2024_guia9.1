@@ -19,11 +19,31 @@ namespace EjercicioIntegrador.Models
             }
         }
         
-        public Evaluación VTV 
-         //Ver cómo implementar indexador con indexer
-        
+        public Evaluación this[int idx]
+        {
+            get
+            {
+                if (idx >= 0 || idx < CantidadVerificaciones) return VTV[idx];
+                return null;
+
+            }
+            //Ver cómo implementar indexador con indexer
+        }
         public Propietario p {  get; }
-        public TipoAprobacion Aprobacion { get; }
+        public TipoAprobacion Aprobacion
+        {
+            get
+            {
+                int min = 0;
+                for (int i = 0; i < CantidadVerificaciones; i++)
+                {
+                    Evaluación e = this[i];
+                    int valor = (int)e.Evaluar();
+                    if (i == 0 || valor < min) min = valor;
+                }
+                return (TipoAprobacion)min;
+            }
+        }
 
         public VTV (string patente, Propietario propietario)
         {

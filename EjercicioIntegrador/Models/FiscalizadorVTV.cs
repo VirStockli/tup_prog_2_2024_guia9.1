@@ -12,6 +12,11 @@ namespace EjercicioIntegrador.Models
 
         public string PlantillaComprobante { get; set; }
 
-        public VTV AgregarVTV (string patente, Propietario propietario)
+        public VTV AgregarVTV(string patente, Propietario propietario)
+        {
+            VTV vtv = new VTV(patente, propietario);
+            return vtv;
+        }
+
     }
 }

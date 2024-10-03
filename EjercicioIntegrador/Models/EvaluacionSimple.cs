@@ -16,7 +16,9 @@ namespace EjercicioIntegrador.Models
         }
         public override TipoAprobacion Evaluar()
         {
-            throw new NotImplementedException();
+            if (HaVerificado)
+            { return TipoAprobacion.Aprobado; }
+            return TipoAprobacion.NoAprobado;
         }
 
         public override string ToString()

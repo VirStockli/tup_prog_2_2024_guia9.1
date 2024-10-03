@@ -26,7 +26,7 @@ namespace EjercicioIntegrador.Models
 
         public override TipoAprobacion Evaluar()
         {
-            throw new NotImplementedException();
+          
         }
 
         public override string ToString()
