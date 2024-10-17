@@ -24,5 +24,10 @@ namespace Actividad8.Models
             { return DNI.CompareTo(p.DNI);}
             return 1;
         }
+
+        public override string ToString()
+        { 
+            return $"{DNI} - {Nombre}";
+        }
     }
 }

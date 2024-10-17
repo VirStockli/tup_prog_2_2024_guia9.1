@@ -11,32 +11,23 @@ namespace Actividad8.Models
     {
         public int Numero { get; set; }
         public double Saldo 
-        { 
-            get 
-            { 
-                double saldo =+ 0;
-                return saldo; 
-            }
-            
-            set { } 
-        }
-        public DateTime Fecha 
-        { 
-            get
-            { return DateTime.Now; }
-            set { }
-        }
+        { get; set; }
+
+        public Persona Titular {  get; set; }
+        public DateTime Fecha {  get; }
         public Cuenta (int numero, Persona titular)
         {
-            this.Numero = numero;
+            Numero = numero;
+            Titular = titular;
 
         }
 
         public Cuenta(int numero, Persona titular, double saldo, DateTime fecha)
         {
             Numero = numero;
+            Titular = titular;
             Saldo = saldo;
-            Fecha = fecha;
+            Fecha = DateTime.Now;
         }
 
         public int CompareTo(object obj)
@@ -45,6 +36,12 @@ namespace Actividad8.Models
             if (c != null)
             { return Numero.CompareTo(c.Numero); }
             return 1;
+        }
+
+        public override string ToString()
+        {
+            // $"Cta:   -Saldo:$
+            return  $"{Titular} - {Numero} - {Saldo:f2}";
         }
     }
 }

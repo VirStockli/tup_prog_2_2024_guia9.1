@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Actividad8", "Actividad8\Actividad8.csproj", "{79D433AB-5195-4E3C-B9F4-C299FCCD8383}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ficheros", "Ficheros", "{EA607388-7DE4-4A07-8E8F-7BE7D8047FB9}"
+	ProjectSection(SolutionItems) = preProject
+		clientes.csv = clientes.csv
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

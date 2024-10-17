@@ -33,7 +33,7 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.btnBackUp = new System.Windows.Forms.Button();
             this.btnRestore = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lbxVer = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnShow
@@ -46,6 +46,7 @@
             this.btnShow.TabIndex = 0;
             this.btnShow.Text = "1- Show Counts";
             this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnImport
             // 
@@ -57,6 +58,7 @@
             this.btnImport.TabIndex = 1;
             this.btnImport.Text = "2- Import";
             this.btnImport.UseVisualStyleBackColor = false;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnExport
             // 
@@ -91,16 +93,13 @@
             this.btnRestore.Text = "5- Restore";
             this.btnRestore.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // lbxVer
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox1.Size = new System.Drawing.Size(393, 259);
-            this.textBox1.TabIndex = 5;
+            this.lbxVer.FormattingEnabled = true;
+            this.lbxVer.Location = new System.Drawing.Point(15, 15);
+            this.lbxVer.Name = "lbxVer";
+            this.lbxVer.Size = new System.Drawing.Size(387, 251);
+            this.lbxVer.TabIndex = 5;
             // 
             // Form1
             // 
@@ -108,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(592, 283);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lbxVer);
             this.Controls.Add(this.btnRestore);
             this.Controls.Add(this.btnBackUp);
             this.Controls.Add(this.btnExport);
@@ -116,8 +115,8 @@
             this.Controls.Add(this.btnShow);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -128,7 +127,7 @@
         public System.Windows.Forms.Button btnExport;
         public System.Windows.Forms.Button btnBackUp;
         public System.Windows.Forms.Button btnRestore;
-        public System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ListBox lbxVer;
     }
 }
 
