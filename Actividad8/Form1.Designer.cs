@@ -70,6 +70,7 @@
             this.btnExport.TabIndex = 2;
             this.btnExport.Text = "3- Export";
             this.btnExport.UseVisualStyleBackColor = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // btnBackUp
             // 

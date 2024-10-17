@@ -25,19 +25,19 @@ namespace Actividad8.Models
         public Cuenta AgregarCuenta(int numeroCuenta, int dni, string nombre)
         {
             Persona p = VerClientePorDNI(dni);
-            if (p!= null)
+            if (p == null)
             {
                 p = new Persona(dni, nombre);
                 clientes.Add(p);
             }
-            
             Cuenta c = VerCuentaPorNumero(numeroCuenta);
-            if (c != null)
+            if (c == null)
             {
                 c = new Cuenta(numeroCuenta, p);
                 cuentas.Add(c);
             }
             return c;
+            
         }
 
         public Cuenta VerCuentaPorNumero (int numeroCuenta)

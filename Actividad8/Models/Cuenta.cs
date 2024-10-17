@@ -10,8 +10,7 @@ namespace Actividad8.Models
     internal class Cuenta : IComparable
     {
         public int Numero { get; set; }
-        public double Saldo 
-        { get; set; }
+        public double Saldo { get; set; }
 
         public Persona Titular {  get; set; }
         public DateTime Fecha {  get; }
@@ -26,7 +25,7 @@ namespace Actividad8.Models
         {
             Numero = numero;
             Titular = titular;
-            Saldo = saldo;
+            Saldo += saldo;
             Fecha = DateTime.Now;
         }
 
